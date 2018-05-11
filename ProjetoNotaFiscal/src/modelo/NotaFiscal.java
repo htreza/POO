@@ -1,5 +1,7 @@
 package modelo;
 
+//Powered by Henrique Treza
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,12 +9,12 @@ public class NotaFiscal {
 
     private String estabelecimento;
     private String dataCompra;
-
-    //array para guardar os produtos
-    //desvantagem de ter tamanho fixo
-    //private Item[] itens;
-    // Diamond Operator -- < nessa lista somente objetos do tipo Item >
-    // não é obrigado a colocar o tipo no <> da direita, nem determinar o tamanho no ()
+    
+    /*Fazer da forma Array(Vetores)
+    private Item[] itens;
+    */
+    //Colletion list do JAVA
+    //Forma Orientada a Objetos, Lista que só aceita Item.
     private List<Item> itens = new ArrayList<>();
 
     /**
@@ -49,40 +51,29 @@ public class NotaFiscal {
     public List<Item> getItens() {
         return itens;
     }
-
-    // metodo com parametros da classe Item - objeto item(que é uma lista)
-    public void adcicionarItem(Item item) {
-
-        //adicionando um item em uma lista
+    //Alterar algo, usa o VOID
+    public void adicionarItem(Item item) {
+        // Adicionando um item em uma lista  .add
         this.itens.add(item);
-
     }
-
-    // metodo get para "contar" a quantidade de itens
-    public int getQuantidadeDeItens() {
-        //recuperando o tamanho de uma lista, quantos itens foram adcionados
-
+    
+    public int getQuantidadeItens() {
+        //recuperando o tamanho da lista
+        //quantos itens foram adicionados  .size
         return this.itens.size();
-
     }
-
-    // metodo get para somar os valores de cada item
+    
+    //Pegar o valor de todos os itens.
     public double getValorTotalNota() {
-
         double total = 0;
-
-        //for each ou enhaced fo
-        //para percorrer a lista
-        // usado quando só se quer saber o valor da lista
+        //FOR EACH
+        //ENHACED FOR
+        // Usa esse FOR somente quando vocÊ quer o valor.
         for (Item item : this.itens) {
-            // aqui cada "item" é um objeto da lista na interção    
+            //aqui, cada "item" é um objeto da lista na iteração.
             total += item.getValorTotal();
-
         }
-
-        // não precisa do this.total pois não é uma variavel de instancia
+        // não precisa do this.total pois não é uma variavel de instância
         return total;
-
     }
-
 }

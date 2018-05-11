@@ -1,44 +1,37 @@
-
-
 package modelo;
 
-
-
+//Powered by Henrique Treza
 public class Item {
-    
-    private String decricao;
+    // Atributos de Instância
+    private String descricao;
     private int quantidade;
     private double valorUnitario;
     
-    //criando o construtor da classe Item (alt + insert)
-
-    public Item(String decricao, int quantidade, double valorUnitario) {
-        this.decricao = decricao;
+    
+    // Construtor é sempre depois dos atributos de instância
+         public Item(String descricao, int quantidade, double valorUnitario) {
+        this.descricao = descricao;
         this.quantidade = quantidade;
         this.valorUnitario = valorUnitario;
     }
-    
-    
-    
 
-    //crianto o metodo get para calcular o valor total
-    public double getValorTotal(){
+    //Criando método para somar o valor total da NF.
+    public double getValorTotal() {
         return this.valorUnitario * this.quantidade;
-        
     }
     
     /**
-     * @return the decricao
+     * @return the descricao
      */
-    public String getDecricao() {
-        return decricao;
+    public String getDescricao() {
+        return descricao;
     }
 
     /**
-     * @param decricao the decricao to set
+     * @param descricao the descricao to set
      */
-    public void setDecricao(String decricao) {
-        this.decricao = decricao;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     /**
@@ -68,7 +61,5 @@ public class Item {
     public void setValorUnitario(double valorUnitario) {
         this.valorUnitario = valorUnitario;
     }
-    
-    
-    
+
 }

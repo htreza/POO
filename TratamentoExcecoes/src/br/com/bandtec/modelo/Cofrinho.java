@@ -1,45 +1,48 @@
 package br.com.bandtec.modelo;
 
+//Powered by Henrique Treza
 public class Cofrinho {
 
     private double valor;
+
     private boolean quebrado = false;
 
-    //construtor com valor inicial obrigatorio 
+    //Construtor com valor inicial no cofrinho
     public Cofrinho(double valor) throws Exception {
-        
-        if(valor < 0){
-            throw new Exception("Não é possivel criar com valor negativo");
-        }
-        this.valor = valor;
+         if (valor < 0) {
+            //"Throw ..." FINALIZA o método
+            // Dizemos que "Lançamos uma exceção
+            throw new Exception("Não é possível depositar valor negativo");  
     }
+      this.valor = valor;
+        }
+         
 
-    //"thrws Exception" indica que o metodo informa ao user que pode gerar exceções
+    // "Throws Exception" Indica que o método informa a  quem for usá-lo que pode lançar uma "Exception"
     public void depositar(double valorDeposito) throws Exception {
 
-         //regra de negocio
-        if (this.quebrado){
-            throw new Exception("O cofrinho está quebrado");
+        if (this.quebrado) {
+            //"Throw ..." FINALIZA o método
+            // Dizemos que "Lançamos uma exceção
+            throw new Exception("O cofrinho está quebrado :(");
         }
-        
-        //regra de negocio
+
         if (valorDeposito < 0) {
-            //"throw" FINALIZA o metodo,lançando uma exceção
-            throw new Exception("Não é possivel depositar valor negativo");
+            //"Throw ..." FINALIZA o método
+            // Dizemos que "Lançamos uma exceção
+            throw new Exception("Não é possível depositar valor negativo");
         }
+
         this.valor += valorDeposito;
 
     }
-    
-    public void quebrar(){
+
+    public void quebrar() {
         this.quebrado = true;
     }
 
-    //metodo get padrao
     public double getValor() {
         return valor;
     }
-    
-    
 
 }
