@@ -1,24 +1,16 @@
-
-
 package br.com.bandtec.modelo;
 
-
-// interface --> classe 100% abstrata
-// metodos somente com assinatura, sem corpo
+//Powered by Henrique Treza
 public interface Boletim {
-    
-    //não é possivel criasr atributos em uma classe
-    // private double nota1;
-    // private double nota2;
-    
-    //somente com assinatura, sem corpo
-    // metodos publicos sempre
-   //double somar (double n1, double n2);
-    
-    // não é possive definir um construtor em uma Interface
-    
-    //todo metodo em uma interface é abstrato e público, por padrão
+    //Interface não é possivel ter método privado.
+
+//Interface são como classes 100% abstratas, ou seja, não é posssível
+    //ter método concretos(com corpo)
+    //NÃO É POSSÍVEL TER ATRIBUTOS DE INSTANCIA
+//double somar(double n1, double n2); método simpleas para somar!!
+    //Todo método em uma interface é, por padrão:
+// Abstrato e Público
+    // Não é possível definir construtores numa interface
     boolean isAprovado();
-    
-    
+
 }

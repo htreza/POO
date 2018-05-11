@@ -1,23 +1,21 @@
 package br.com.bandtec.modelo;
-
-// como classe concreta, DEVE implementar os metodos das Interfaces 'avós' 
-// caso não tenha sido implemantado na classe abstrata 'mãe' 
-// ALT + Shift + F12 ==> para visualizar a hierarquia das classes
-public class AtletaConcreto extends AtletaAbstrato {
-
+ 
+//Powered by Henrique Treza
+public class AtletaConcreto extends AtletaAbstrato{
+/*
+    ALT + SHIFT + F12
+    Visualizar a hierarquia herdada da classe abstrata.
+    */
     @Override
     public void correr() {
-
-    }
-
-    @Override
-    public void nadar() {
-
-    }
+        }
 
     @Override
     public void pedalar() {
+        }
 
-    }
-
+    @Override
+    public void nadar() {
+        }
+    
 }

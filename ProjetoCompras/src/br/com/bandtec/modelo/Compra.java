@@ -1,32 +1,31 @@
-
 package br.com.bandtec.modelo;
-
-
+ 
+//Powered by Henrique Treza
 public class Compra {
     
-    protected final Integer id;
-    protected final Double valorTotal;
-    protected final TipoCartao tipoCartaPagamento;
+   private final Integer id;
+   private final Double valorTotal;
+   private final TipoCartao tipoCartaoPagamento;
 
-    //constutor
-    public Compra(Integer id, Double valorTotal, TipoCartao tipoCartaPagamento) {
+    public Compra(Integer id, Double valorTotal, TipoCartao tipoCartaoPagamento) {
         this.id = id;
         this.valorTotal = valorTotal;
-        this.tipoCartaPagamento = tipoCartaPagamento;
+        this.tipoCartaoPagamento = tipoCartaoPagamento;
     }
 
+    
     public Integer getId() {
         return id;
     }
 
+    
     public Double getValorTotal() {
         return valorTotal;
     }
 
-    public TipoCartao getTipoCartaPagamento() {
-        return tipoCartaPagamento;
+    
+    public TipoCartao getTipoCartaoPagamento() {
+        return tipoCartaoPagamento;
     }
-    
-    
     
 }

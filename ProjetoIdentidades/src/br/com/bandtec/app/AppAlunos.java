@@ -1,39 +1,32 @@
-
 package br.com.bandtec.app;
 
+//Powered by Henrique Treza
 import br.com.bandtec.modelo.Aluno;
 
-
 public class AppAlunos {
-    
+
     public static void main(String[] args) {
+//Igual igual == O java pergunta se é o mesmo cara. Verifica se é o mesmo 
+// Objeto na memoria.
+        Aluno aluno1 = new Aluno(1, "Tesla");
+        Aluno aluno2 = new Aluno(1, "Tesla");
         
-        //dois objetos com parametros identicos
-        //mas são o mesmo objeto
-        Aluno aluno1 = new Aluno(1, "jota");
-        Aluno aluno2 = new Aluno(1, "jota");
-        
-        // verifica se são o mesmo objeto em memória
         if (aluno1 == aluno2){
-            System.out.println("risada");
-        }else{
-            System.out.println("objetos com mesmos parametros, mas com endereços diferentes, dá certo se tem metodos hashcode e equals");
+            System.out.println("Aluno1 é o Aluno2");
+        }
+        if (aluno1.equals(aluno2)){
+            System.out.println("Aluno1 tem os mesmos valores de Aluno2");
         }
         
-        if(aluno1.equals(aluno2)){
-            System.out.println("aluno1 tem os mesmos valores de aluno2, dá certo se tem metodos hashcode e equals");
-        }else{
-            System.out.println("ainda não funciona, são objetos diferentes");
-        }
-        
-        //aluno3 não é novo objeto, é uma referencia ao aluno2
         Aluno aluno3 = aluno2;
-        if(aluno2 == aluno3){
-            System.out.println("3 e 2 são os mesmos, e aluno3 herda os metodos de aluno, com hashocode e equals");
+        if (aluno2 == aluno3){
+            System.out.println("3 e 2 são o MESMO!!!");
         }
         
-        aluno2.setNome("jose");
-        System.out.println("o aluno3 também chama "+aluno3.getNome()+" que foi atribuido a aluno2");
+        aluno2.setNome("Musk");
+        System.out.println(aluno3.getNome());
+        
+
     }
-    
+
 }

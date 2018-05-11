@@ -1,13 +1,12 @@
-
 package br.com.bandtec.excecoes;
+ 
+//Powered by Henrique Treza
+public class ValorInicialInvalidoException extends Exception{
 
-//extende da classe padrão do Java Exception
-public class ValorInicialInvalidoException  extends Exception{
-    
-    @Override 
-    //sobrescrita do metodo getMessage do Exception
-    public String getMessage(){
-        return "O cofre não pode ser criado com valor negativo";
+    @Override
+    public String getMessage() {
+        return "O cofre não pode ser criado com valor negativo!!!";
     }
+    
     
 }

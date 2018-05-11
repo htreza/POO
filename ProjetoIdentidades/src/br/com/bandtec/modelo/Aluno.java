@@ -1,17 +1,19 @@
 package br.com.bandtec.modelo;
 
+//Powered by Henrique Treza
 public class Aluno {
 
     private int matricula;
     private String nome;
+    
+    
+    //Isso é usado quando você quer comparar duas classes no sistema, usa-se equals e hashcode.
+    // Criado com ALT + INSERT
 
-    //metodo criado com alt + insert
-    //usado caso seja necessario comparar objetos ao longo do sistema
-    // a classe String herda esses metodos por padrão
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 47 * hash + this.matricula;
+        hash = 11 * hash + this.matricula;
         return hash;
     }
 
@@ -34,15 +36,11 @@ public class Aluno {
     }
     
     
+    
 
-    //construtor "padrão"
     public Aluno(int matricula, String nome) {
         this.matricula = matricula;
         this.nome = nome;
-    }
-
-    public Aluno() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public int getMatricula() {
