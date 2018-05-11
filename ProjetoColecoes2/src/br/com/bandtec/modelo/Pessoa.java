@@ -1,11 +1,13 @@
+
 package br.com.bandtec.modelo;
 
-//Powered by Henrique Treza
-public class Pessoa {
 
+public class Pessoa {
+    
     private String nome;
     private int idade;
 
+    //construtor
     public Pessoa(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
@@ -27,9 +29,14 @@ public class Pessoa {
         this.idade = idade;
     }
 
+    //toString criado com alt + insert
+    // dá um "nome" legivel ao objeto Pessoa, mostrando os atributos 
+    // se alterar os atributos é preciso gerar o toString
     @Override
     public String toString() {
         return "Pessoa{" + "nome=" + nome + ", idade=" + idade + '}';
     }
-
+    
+    
+    
 }
